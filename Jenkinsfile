@@ -6,7 +6,7 @@ pipeline{
 }
 
     stages {
-        stage ('BUILD')
+        stage ('C-Project')
         {
             steps{
                 sh'''
