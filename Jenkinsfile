@@ -17,7 +17,7 @@ pipeline{
         {
             steps{
                 sh'''
-                This is to build J-Project
+                echo "This is to build J-Project"
                 '''
             }
         }
