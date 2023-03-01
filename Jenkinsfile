@@ -1,15 +1,16 @@
 pipeline{
     agent any
     
-    parameters {
-            choice choices: ['C-Project', 'J-Project'], name: 'Job'
-                }
+    environment {
+  MASTER_URL = "172.31.41.133"
+}
+
     stages {
-        stage ('C-Project')
+        stage ('BUILD')
         {
             steps{
                 sh'''
-                echo "This is to build C-Project"
+                echo "This is to build C-Project in $MASTER_URL"
                 '''
             }
         }
@@ -17,7 +18,7 @@ pipeline{
         {
             steps{
                 sh'''
-                echo "This is to build J-Project"
+                echo "This is to build J-Project in MASTER_URL"
                 '''
             }
         }
